@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Fdb.PopulationHealth.Api</AssemblyName>
+    <RootNamespace>Fdb.PopulationHealth.Api</RootNamespace>
+    <Nullable>enable</Nullable>
+    <Description>Api for providing Population Health reporting data</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sensemaking.Web.Api" Version="1.0.29" />
+  </ItemGroup>
+
+</Project>
