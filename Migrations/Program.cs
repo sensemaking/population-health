@@ -6,7 +6,6 @@ namespace Migrations
 {
     class Program
     {
-    
         static void Main(string[] args)
         {
             var connectionString = @"Server=(localdb)\PopulationHealth;Database=PopulationHealth;Integrated Security=True";
