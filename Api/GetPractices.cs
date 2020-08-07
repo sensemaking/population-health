@@ -27,6 +27,7 @@ namespace Fdb.PopulationHealth.Api
 
     public class HitCount
     {
+        public string Practice { get; } = null!;
         public string Name { get; } = null!;
         public string Description { get; } = null!;
         public int Count { get; }

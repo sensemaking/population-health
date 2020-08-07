@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="Sensemaking.Query.Dapper" Version="1.0.32" />
-    <PackageReference Include="Sensemaking.Web.Api" Version="1.0.29" />
+    <PackageReference Include="Sensemaking.Web.Api" Version="1.0.31" />
   </ItemGroup>
 
 </Project>
