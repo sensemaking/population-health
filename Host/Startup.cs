@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Sensemaking.Dapper;
 using Sensemaking.Query.Dapper;
@@ -14,8 +15,13 @@ namespace Host
 
         public override void ConfigureServices(IServiceCollection services)
         {
+            var config = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .AddJsonFile("localsettings.json", true, true)
+                .Build();
+
             base.ConfigureServices(services);
-            services.AddSingleton<IDb>(p => new Db(@"Server=(localdb)\PopulationHealth;Database=PopulationHealth;Integrated Security=True"));
+            services.AddSingleton<IDb>(p => new Db(config["ConnectionString"]));
         }
 
         public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
