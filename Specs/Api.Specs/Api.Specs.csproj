@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <AssemblyName>Fdb.PopulationHealth.Api.Specs</AssemblyName>
+	  <RootNamespace>Fdb.PopulationHealth.Api.Specs</RootNamespace>
+	  <Description>Specifcations for Api providing Population Health reporting data</Description>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<OutputPath>bin\</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>bin\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0" />
+	  <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+	  <PackageReference Include="Sensemaking.Bdd.Dapper" Version="1.0.32" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Api\Api.csproj" />
+	</ItemGroup>
+
+</Project>

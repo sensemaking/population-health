@@ -6,7 +6,7 @@ using Sensemaking.Web.Api;
 
 namespace Fdb.PopulationHealth.Api
 {
-    public class GetPractices : IHandleGetRequests
+    public class GetPracticesByIcs : IHandleGetRequests
     {
         private const string IcsRouteKey = "ics";
 
